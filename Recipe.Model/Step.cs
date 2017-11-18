@@ -4,8 +4,8 @@ namespace Recipe.Model
 {
     public class Step
     {
-        [JsonProperty(PropertyName = "stepId")]
-        public int StepId { get; set; }
+        [JsonProperty(PropertyName = "id")]
+        public int Id { get; set; }
 
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

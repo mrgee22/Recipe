@@ -9,7 +9,7 @@ using Microsoft.Azure.Documents.Linq;
 
 namespace Recipe.Data
 {
-    public class RecipeRepository<T> where T : class
+    public class DBRepository<T> where T : class
     {
         private static readonly string Endpoint = "https://recipedb.documents.azure.com:443/";
         private static readonly string Key = "XzyX820lkfzuGU303CrW8EegXBYotXKgiKrhYgyJqfU0MVyK8sZFXG4uKm2Dfq6Lf0wiyr3eT9ddtlE4UAbSuw==";
@@ -52,6 +52,23 @@ namespace Recipe.Data
             }
 
             return results;
+        }
+
+        public static async Task<T> GetItemSingleItemAsync(Expression<Func<T, bool>> predicate)
+        {
+            IDocumentQuery<T> query = client.CreateDocumentQuery<T>(
+                UriFactory.CreateDocumentCollectionUri(DatabaseId, CollectionId),
+                new FeedOptions { MaxItemCount = -1 })
+                .Where(predicate)
+                .AsDocumentQuery();
+
+            List<T> results = new List<T>();
+            while (query.HasMoreResults)
+            {
+                results.AddRange(await query.ExecuteNextAsync<T>());
+            }
+            return results.FirstOrDefault();
+
         }
 
         public static async Task<Document> CreateItemAsync(T item)

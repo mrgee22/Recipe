@@ -5,8 +5,8 @@ namespace Recipe.Model
 {
     public class Recipe
     {
-        [JsonProperty(PropertyName ="recipeId")]
-        public int RecipeId { get; set; }
+        [JsonProperty(PropertyName ="id")]
+        public int Id { get; set; }
 
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }

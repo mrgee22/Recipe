@@ -28,7 +28,7 @@ namespace Recipe.Web.Controllers
         [ActionName("Index")]
         public async Task<IActionResult> Index()
         {
-            var items = await RecipeRepository<Model.Recipe>.GetItemsAsync(r => r.CreatedBy == 1);
+            var items = await DBRepository<Model.Recipe>.GetItemsAsync(r => r.CreatedBy == 1);
             return View(items);
         }
     }
