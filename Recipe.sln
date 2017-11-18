@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Web", "Recipe.Web\Recipe.Web.csproj", "{E1C8C6ED-93B3-4F04-A438-4E628D5BE768}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipe.Web", "Recipe.Web\Recipe.Web.csproj", "{E1C8C6ED-93B3-4F04-A438-4E628D5BE768}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Model", "Recipe.Model\Recipe.Model.csproj", "{201039E8-C179-4B56-AF03-0450BE23CCBF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Data", "Recipe.Data\Recipe.Data.csproj", "{E9143870-77F9-47AF-A05E-C1E5AA183E20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipe.Model", "Recipe.Model\Recipe.Model.csproj", "{201039E8-C179-4B56-AF03-0450BE23CCBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Tests", "Recipe.Tests\Recipe.Tests.csproj", "{7C50DD15-CCCB-4567-953C-FDCF7438DC7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Data", "Recipe.Data\Recipe.Data.csproj", "{F3F2E6D7-1E9F-45DD-9CA5-6CBAA3E06735}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{201039E8-C179-4B56-AF03-0450BE23CCBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{201039E8-C179-4B56-AF03-0450BE23CCBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{201039E8-C179-4B56-AF03-0450BE23CCBF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9143870-77F9-47AF-A05E-C1E5AA183E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9143870-77F9-47AF-A05E-C1E5AA183E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9143870-77F9-47AF-A05E-C1E5AA183E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9143870-77F9-47AF-A05E-C1E5AA183E20}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C50DD15-CCCB-4567-953C-FDCF7438DC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C50DD15-CCCB-4567-953C-FDCF7438DC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C50DD15-CCCB-4567-953C-FDCF7438DC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C50DD15-CCCB-4567-953C-FDCF7438DC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F2E6D7-1E9F-45DD-9CA5-6CBAA3E06735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F2E6D7-1E9F-45DD-9CA5-6CBAA3E06735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F2E6D7-1E9F-45DD-9CA5-6CBAA3E06735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F2E6D7-1E9F-45DD-9CA5-6CBAA3E06735}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

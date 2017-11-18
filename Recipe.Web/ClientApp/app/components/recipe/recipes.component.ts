@@ -28,6 +28,5 @@ interface Recipe {
 }
 
 interface Step {
-    stepId: number,
     description: string
 }

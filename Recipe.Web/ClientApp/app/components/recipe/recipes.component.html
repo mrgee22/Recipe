@@ -4,8 +4,7 @@
 
 <table class='table' *ngIf="recipes">
     <thead>
-        <tr>
-            <th>Recipe ID</th>
+        <tr>            
             <th>Title</th>
             <th>Description</th>
             <th>Created By</th>
@@ -14,8 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let recipe of recipes">
-            <td>{{ recipe.recipeId }}</td>
+        <tr *ngFor="let recipe of recipes">            
             <td>{{ recipe.title }}</td>
             <td>{{ recipe.description }}</td>
             <td>{{ recipe.createdBy }}</td>
@@ -23,14 +21,12 @@
             <td>
                 <table>
                     <thead>
-                        <tr>
-                            <th>Step No</th>
+                        <tr>                           
                             <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let step of recipe.steps">
-                            <td>{{step.stepId}}</td>
+                        <tr *ngFor="let step of recipe.steps">                            
                             <td>{{step.description}}</td>
                         </tr>
                     </tbody>
