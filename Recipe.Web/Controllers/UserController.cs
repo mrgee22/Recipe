@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Recipe.Model;
-using Recipe.Web.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using Recipe.Service;
 
 namespace Recipe.Web.Controllers
 {
@@ -78,7 +74,7 @@ namespace Recipe.Web.Controllers
 
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(string id)
         {
             var user = _userService.GetById(id);
 
@@ -86,7 +82,7 @@ namespace Recipe.Web.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]User user)
+        public IActionResult Update(string id, [FromBody]User user)
         {
             user.Id = id;
 
@@ -104,7 +100,7 @@ namespace Recipe.Web.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
             _userService.Delete(id);
             return Ok();

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Tests", "Recipe.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Data", "Recipe.Data\Recipe.Data.csproj", "{F3F2E6D7-1E9F-45DD-9CA5-6CBAA3E06735}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Service", "Recipe.Service\Recipe.Service.csproj", "{3F5C79B9-E789-4032-B782-B59B23B030A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F3F2E6D7-1E9F-45DD-9CA5-6CBAA3E06735}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3F2E6D7-1E9F-45DD-9CA5-6CBAA3E06735}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3F2E6D7-1E9F-45DD-9CA5-6CBAA3E06735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F5C79B9-E789-4032-B782-B59B23B030A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F5C79B9-E789-4032-B782-B59B23B030A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F5C79B9-E789-4032-B782-B59B23B030A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F5C79B9-E789-4032-B782-B59B23B030A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

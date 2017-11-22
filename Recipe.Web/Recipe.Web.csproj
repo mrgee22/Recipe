@@ -23,8 +23,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Recipe.Data\Recipe.Data.csproj" />
+    <None Remove="ClientApp\app\components\user\login.component.ts" />
+    <None Remove="ClientApp\app\models\index.ts" />
+    <None Remove="ClientApp\app\models\recipe.ts" />
+    <None Remove="ClientApp\app\models\user.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Recipe.Model\Recipe.Model.csproj" />
+    <ProjectReference Include="..\Recipe.Service\Recipe.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +42,11 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\components\recipe\recipes.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\user\login.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\user\registration.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\recipe.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\user.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

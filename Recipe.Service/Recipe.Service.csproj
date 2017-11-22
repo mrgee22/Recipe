@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Recipe.Data\Recipe.Data.csproj" />
+    <ProjectReference Include="..\Recipe.Model\Recipe.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Documents.Client">
+      <HintPath>..\Recipe.Web\bin\Debug\netcoreapp2.0\Microsoft.Azure.Documents.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

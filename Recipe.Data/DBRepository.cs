@@ -11,8 +11,9 @@ namespace Recipe.Data
 {
     public class DBRepository<T> where T : class
     {
-        private static readonly string Endpoint = "https://recipedb.documents.azure.com:443/";
-        private static readonly string Key = "XzyX820lkfzuGU303CrW8EegXBYotXKgiKrhYgyJqfU0MVyK8sZFXG4uKm2Dfq6Lf0wiyr3eT9ddtlE4UAbSuw==";
+        private static readonly string Endpoint = "https://localhost:8081";
+        //private static readonly string Key = "XzyX820lkfzuGU303CrW8EegXBYotXKgiKrhYgyJqfU0MVyK8sZFXG4uKm2Dfq6Lf0wiyr3eT9ddtlE4UAbSuw=="; Azure
+        private static readonly string Key = "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
         private static readonly string DatabaseId = "RecipesCollection";
         private static readonly string CollectionId = "recipes";
         private static DocumentClient client;
