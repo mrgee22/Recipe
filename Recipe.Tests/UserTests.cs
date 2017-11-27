@@ -20,7 +20,7 @@ namespace Recipe.Tests
         }
 
         [TestMethod]
-        public void CreateUserShouldAddUsertoDB()
+        public void Create_User_Should_Add_User_to_DB()
         {
             var user = CreateUserObject();
             user.Username = $"imjohn{new Random().Next(0, 100)}";

@@ -6,7 +6,7 @@ namespace Recipe.Model
     public class Recipe
     {
         [JsonProperty(PropertyName ="id")]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
@@ -20,7 +20,7 @@ namespace Recipe.Model
         [JsonProperty(PropertyName = "steps")]
         public List<Step> Steps { get; set; }
 
-        [JsonProperty(PropertyName = "createdBy")]
-        public int CreatedBy { get; set; }
+        [JsonProperty(PropertyName = "createdById")]
+        public string CreatedById { get; set; }
     }
 }

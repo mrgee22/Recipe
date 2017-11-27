@@ -5,12 +5,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Recipe.Data;
+using Recipe.Service;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Recipe.Web.Controllers
 {
     [Route("api/[controller]")]
     public class RecipeController : Controller
     {
+        private IRecipeService _recipeService;
+
+        public RecipeController(IRecipeService recipeService)
+        {
+            _recipeService = recipeService;
+        }
+
         //[HttpGet("[action]")]
         //public IEnumerable<Model.Recipe> GetRecipes()
         //{
@@ -25,11 +34,58 @@ namespace Recipe.Web.Controllers
         //        }
         //    };
         //}
-        [ActionName("Index")]
-        public async Task<IActionResult> Index()
+
+        [Authorize]
+        [HttpGet("[action]")]
+        public IActionResult GetRecipes(string userId)
         {
-            var items = await DBRepository<Model.Recipe>.GetItemsAsync(r => r.CreatedBy == 1);
+            var items = _recipeService.GetAll(userId);
             return View(items);
+        }
+
+        [Authorize]
+        [HttpPost("[action]")]
+        public IActionResult CreateRecipe([FromBody]Model.Recipe recipe)
+        {
+            try
+            {
+                // save 
+                _recipeService.Create(recipe);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // return error message if there was an exception
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("[action]")]
+        public IActionResult UpdateRecipe(Model.Recipe recipe)
+        {
+            try
+            {
+                _recipeService.Update(recipe);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteRecipe(string recipeId)
+        {
+            try
+            {
+                _recipeService.Delete(recipeId);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
